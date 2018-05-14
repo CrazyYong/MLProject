@@ -9,6 +9,7 @@ mean:均值
 seed:随机种子
 '''
 w=tf.Variable(tf.random_normal([2,3],stddev=2,mean=0,seed=1))
+print("变量-",w)
 
 '''
 tf.truncated_normal():去掉过大偏离点的正太分布

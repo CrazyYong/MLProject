@@ -21,8 +21,8 @@ y_=tf.placeholder(tf.float32,shape=(None,1))
 w1=tf.Variable(tf.random_normal([2,3],stddev=1,seed=1))#第一层参数1,两行三列的张量
 w2=tf.Variable(tf.random_normal([3,1],stddev=1,seed=1))#第二层参数2,三行一列的张量
 
-a=tf.matmul(x,w1)
-y=tf.matmul(a,w2)
+a=tf.matmul(x,w1)#第一层神经元计算
+y=tf.matmul(a,w2)#第二层神经元计算
 
 #2定义损失函数及反向传播方法
 loss=tf.reduce_mean(tf.square(y-y_))#均方误差
